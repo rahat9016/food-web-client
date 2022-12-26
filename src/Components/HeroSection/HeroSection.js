@@ -1,7 +1,6 @@
 import React from "react";
-import Button from "../Button/Button";
 import Pizza from "../../Images/pizza.png";
-import Salad from "../../Images/salat.png";
+import Button from "../Common/Button";
 const HeroSection = () => {
   return (
     <section className="w-full md:h-[60vh]   flex flex-col-reverse md:flex-row items-center px-2 md:px-20">

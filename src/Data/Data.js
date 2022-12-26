@@ -1,13 +1,15 @@
 import { BiHomeSmile } from "react-icons/bi";
+import { IoFastFoodOutline } from "react-icons/io";
 import { AiOutlineMessage } from "react-icons/ai";
 import { RiSettingsLine } from "react-icons/ri";
 import { MdOutlineLogout } from "react-icons/md";
+import { BsMenuButtonWideFill } from "react-icons/bs";
 import Burger from "../Images/burger_nnq4osbtgswt_512.png";
 import Pizza from "../Images/pizza_4pxllj7qp295_512.png";
 import Hotdog from "../Images/hotdog_ndphya5wxqsl_512.png";
 import Taco from "../Images/taco_tu69yjs1cpip_512.png";
 import Drink from "../Images/drink_n3qeplxd044i_512.png";
-export const SidebarData = [
+export const SidebarUserData = [
   {
     icon: BiHomeSmile,
     heading: "Home",
@@ -33,6 +35,32 @@ export const SidebarData = [
     id: 4,
   },
 ];
+// export const SidebarAdminData = [
+//   {
+//     icon: BiHomeSmile,
+//     heading: "Home",
+//     location: "/",
+//     id: 1,
+//   },
+//   {
+//     icon: BsMenuButtonWideFill,
+//     heading: "Menu",
+//     location: "/menu",
+//     id: 2,
+//   },
+//   {
+//     icon: IoFastFoodOutline,
+//     heading: "Food",
+//     location: "/Food",
+//     id: 3,
+//   },
+//   {
+//     icon: MdOutlineLogout,
+//     heading: "Logout",
+//     location: "/logout",
+//     id: 4,
+//   },
+// ];
 export const CategoryData = [
   {
     icon: Burger,

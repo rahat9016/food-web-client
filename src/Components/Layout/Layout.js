@@ -8,7 +8,7 @@ const Layout = (props) => {
   return (
     <div>
       <div className="flex">
-        <aside className="md:w-[5%] hidden bg-white drop-shadow-sm  md:flex justify-center">
+        <aside className="h-screen md:w-[5%] hidden bg-white drop-shadow-sm  md:flex justify-center">
           <LeftSide />
         </aside>
         <div className="w-full md:w-[75%] bg-lightWhite">
