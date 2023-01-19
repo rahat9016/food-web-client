@@ -9,20 +9,25 @@ module.exports = {
         lightPrimary: "#FFECD1",
         lightWhite: "#FAF9FB",
         lightRed: "#FAF9FB",
+        textLight: "#ebebff",
+        bgLightBlue: "#3E4172",
+        lightGreen: "#A0E096",
+        pink: "#EC6083",
       },
       fontFamily: {
         lato: ["Lato", "sans-serif"],
         manrope: ["Manrope", "sans-serif"],
         nunito: ["Nunito", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        fira: ["Fira Sans", "sans-serif"],
       },
       backdropBlur: {
         bxs: "2px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/src/Images/bg.webp')",
+        hero: "url('./bg.webp')",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar-hide")],
 };

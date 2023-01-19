@@ -1,23 +1,15 @@
 import React from "react";
-import { CategoryData } from "../../Data/Data";
-import CategoryCard from "../CategoryCard/CategoryCard";
-import FoodCard from "../FoodCard/FoodCard";
-
+import { useSelector } from "react-redux";
+import MenuCard from "../CategoryCard/MenuCard";
 const MenuCategory = () => {
+  const menus = useSelector((state) => state.menu.menu);
+
   return (
     <div className="md:px-20 ">
-      <h1 className="md:text-3xl font-manrope">Menu Category</h1>
       <div className="flex gap-2 mt-4 ml-2">
-        {CategoryData.map((category) => (
-          <CategoryCard category={category} />
-        ))}
-      </div>
-      <div className="grid grid-cols-5 gap-3 mt-4 ml-2">
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
-        <FoodCard />
+        {menus && menus.length > 0
+          ? menus.map((menu, index) => <MenuCard key={index} menu={menu} />)
+          : null}
       </div>
     </div>
   );
