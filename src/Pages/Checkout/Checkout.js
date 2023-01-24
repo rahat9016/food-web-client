@@ -73,25 +73,25 @@ const Checkout = () => {
   return (
     <Layout>
       {" "}
-      <div className="w-9/12 mx-auto">
+      <div className=" w-full md:w-9/12 mx-auto px-2">
         <h1 className="my-6 text-2xl font-fira font-bold ">Checkout</h1>
-        <form onSubmit={handleSubmit}>
-          <div className="flex gap-2">
+        <form onSubmit={handleSubmit} className="w-full">
+          <div className="flex flex-col lg:flex-row gap-2 w-full">
             {/* Customer Information */}
-            <div className="w-[25%] sm:max-w-full mb-10">
+            <div className="mb-10">
               <Address
                 handleUserInformation={handleUserInformation}
                 values={values}
               />
             </div>
             {/* Payment Method */}
-            <div className="w-[75%] mb-10">
+            <div className="mb-10">
               <div className="flex flex-wrap justify-between">
-                <div className="w-[49.5%] ">
+                <div className="w-full md:w-[49.5%] ">
                   <PaymentMethod setPayment={setPayment} />
                 </div>
                 {/* Delivery Method  */}
-                <div className="w-[49.5%]">
+                <div className="w-full md:w-[49.5%]">
                   <DeliveryMethod handleChange={handleChange} />
                   <Coupon />
                 </div>

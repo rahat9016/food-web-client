@@ -22,16 +22,38 @@ const TopSelling = () => {
     dispatch(_get_foods_by_sort("sold", "desc"));
   }, [dispatch]);
   return (
-    <div className="px-20">
+    <div className="px-2 lg:px-20">
       <h1 className="font-bold font-nunito text-4xl mb-10">
         Top Selling Food's
       </h1>
       <div className="p-2 bg-white  shadow-lg my-4 rounded-lg">
         <Swiper
-          slidesPerView={5}
-          spaceBetween={30}
+          slidesPerView={1}
+          spaceBetween={10}
           pagination={{
             clickable: true,
+          }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            425: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1025: {
+              slidesPerView: 4,
+              spaceBetween: 20,
+            },
+            1440: {
+              slidesPerView: 5,
+              spaceBetween: 20,
+            },
           }}
           modules={[Pagination]}
           className="mySwiper"
@@ -39,13 +61,13 @@ const TopSelling = () => {
           {foods && foods.length > 0
             ? foods.map((food, index) => {
                 return (
-                  <div key={index}>
+                  <div key={index} className="">
                     <SwiperSlide>
                       <div className="bg-[#F8F7F5] px-10 py-2" key={index}>
                         <img
                           src={food.foodImg[0].url}
                           alt=""
-                          className="h-32"
+                          className=" h-32 mr-auto ml-auto"
                         />{" "}
                         <div>
                           <h1 className="text-center text-xl font-fira w-full h-11">

@@ -16,7 +16,7 @@ const OrderHistory = () => {
   }, [dispatch]);
   return (
     <Layout>
-      <div className="px-20">
+      <div className="px-2 md:px-20">
         <div className="flex gap-2 items-center my-10">
           <BiUser className="text-4xl	" />
           <div>

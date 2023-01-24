@@ -6,7 +6,7 @@ import { _add_to_cart } from "../../Redux/Action/Cart";
 const OfferCard = ({ offer }) => {
   const dispatch = useDispatch();
   return (
-    <div className="w-72 h-[86px] bg-white relative shadow-md rounded-lg ">
+    <div className="w-72 h-[86px] bg-white relative shadow-md rounded-lg mx-auto">
       <div className="w-24 h-24 bg-[#d8ffcdbb] rounded-full absolute top-[-30%] left-[-5%] flex items-center justify-center p-1 shadow-sm border-4 border-white ">
         <img src={offer.offerImg.url} alt="" className="w-24 " />
       </div>

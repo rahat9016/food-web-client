@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { useDispatch, useSelector } from "react-redux";
+import Sidebar from "../../../Components/Admin/Sidebar";
 import Form from "../../../Components/Form/FoodForm";
 import Layout from "../../../Components/Layout/Layout";
 import { _food } from "../../../Redux/Action/Food";
@@ -46,7 +47,7 @@ const Food = () => {
     setFoodPictures([]);
   };
   return (
-    <Layout admin>
+    <Sidebar>
       <div className="px-10">
         <h1 className="text-3xl font-bold font-nunito mt-10 mb-6">Food</h1>
         <Form
@@ -89,7 +90,7 @@ const Food = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Sidebar>
   );
 };
 

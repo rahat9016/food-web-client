@@ -7,6 +7,7 @@ import Layout from "../../../Components/Layout/Layout";
 import { _delete_menu, _get_menu, _menu } from "../../../Redux/Action/Menu";
 import { AiFillDelete } from "react-icons/ai";
 import { BiEdit } from "react-icons/bi";
+import Sidebar from "../../../Components/Admin/Sidebar";
 const Menu = () => {
   const dispatch = useDispatch();
   const menu = useSelector((state) => state.menu);
@@ -48,7 +49,7 @@ const Menu = () => {
   };
 
   return (
-    <Layout admin>
+    <Sidebar>
       <div className="px-10 ">
         <h1 className="text-3xl font-bold font-nunito mt-10 mb-6">
           Menu Category
@@ -153,7 +154,7 @@ const Menu = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Sidebar>
   );
 };
 

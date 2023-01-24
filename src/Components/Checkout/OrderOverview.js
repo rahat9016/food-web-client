@@ -9,7 +9,7 @@ const OrderOverview = ({
   return (
     <div className="w-full p-4 bg-white shadow-sm">
       <CheckoutHeader number="4" title="Order Overview" />
-      <div className="px-4 pb-4">
+      <div className="px-2 md:px-4 pb-4">
         <ul className="flex flex-row ">
           <li className="basis-3/5 bg-bgShop px-2 py-3 mx-[2px] rounded-sm text-[#66666D] font-semibold	">
             Product Name
@@ -55,10 +55,10 @@ const OrderOverview = ({
         <div>
           <div className="flex border-b border-[#F5F5F5]  pb-4">
             <div className="basis-4/5 text-right">
-              <h1 className="text-xl	">Sub-Total:-</h1>
+              <h1 className="text-base md:text-xl">Sub-Total:-</h1>
             </div>
             <div className="basis-1/5	 text-left ml-4">
-              <span className="text-xl font-semibold text-orange">
+              <span className="text-base md:text-xl font-semibold text-orange">
                 {Math.round(cartTotal() || 0).toLocaleString("en-US")}
                 {} tk
               </span>
@@ -66,21 +66,21 @@ const OrderOverview = ({
           </div>
           <div className="flex border-b border-[#F5F5F5] pb-4">
             <div className="basis-4/5 text-right">
-              <h1 className="text-xl	">Delivery charges:-</h1>
+              <h1 className="text-base md:text-xl">Delivery charges:-</h1>
             </div>
             <div className="basis-1/5 text-left ml-4">
-              <span className="text-xl font-semibold text-orange">
+              <span className="text-base md:text-xl font-semibold text-orange">
                 {Math.round(delivery).toLocaleString("en-US")}
                 {} tk
               </span>
             </div>
           </div>
-          <div className="flex ">
+          <div className="flex">
             <div className="basis-4/5 text-right">
               <h1 className="text-xl	">Total:-</h1>
             </div>
             <div className="basis-1/5 text-left ml-4">
-              <span className="text-xl font-semibold text-orange">
+              <span className="text-base md:text-xl font-semibold text-orange">
                 {Math.round(totalAmountAfterDiscount || 0).toLocaleString(
                   "en-US"
                 )}

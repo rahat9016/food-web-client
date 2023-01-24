@@ -44,8 +44,8 @@ const Signing = () => {
   }, [auth.authenticate, navigate, locationState, auth.admin]);
   return (
     <Layout>
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-col w-[500px] mx-auto my-24 bg-white px-4 py-6 rounded-md shadow-sm">
+      <form onSubmit={handleSubmit} className="w-full p-3">
+        <div className="flex flex-col w-full md:w-8/12 lg:w-6/12 xl:w-4/12 mx-auto my-24 bg-white px-4 py-6 rounded-md shadow-sm ">
           <h1 className="text-xl mb-4 font-nunito font-bold text-center">
             Account Login
           </h1>

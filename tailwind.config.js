@@ -11,6 +11,7 @@ module.exports = {
         lightRed: "#FAF9FB",
         textLight: "#ebebff",
         bgLightBlue: "#3E4172",
+        bgBlue: "#030848",
         lightGreen: "#A0E096",
         pink: "#EC6083",
       },

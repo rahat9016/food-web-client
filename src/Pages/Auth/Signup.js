@@ -28,18 +28,18 @@ const Signup = () => {
   };
   return (
     <Layout>
-      <form onSubmit={handleSubmit}>
-        <div className="flex flex-col w-[500px] mx-auto my-24 bg-white px-4 py-6 rounded-md shadow-sm">
+      <form onSubmit={handleSubmit} className="w-full p-3">
+        <div className="flex flex-col w-full md:w-8/12 lg:w-6/12 xl:w-4/12 mx-auto my-24 bg-white px-4 py-6 rounded-md shadow-sm">
           <h1 className="text-xl mb-4 font-nunito font-bold text-center">
             Account Create
           </h1>
-          <div className="flex flex-row gap-2">
-            <div>
+          <div className="flex gap-2">
+            <div className="w-6/12	">
               <label className="after:content-['*'] after:ml-0.5 after:text-red-500">
                 First Name
               </label>
               <Input
-                className=" p-2 border border-gray rounded-md outline-none focus:border-gray invalid:border-red-500 w-full "
+                className=" p-2 border border-gray rounded-md outline-none focus:border-gray invalid:border-red-500 "
                 placeholder="First Name"
                 type="text"
                 name="firstName"
@@ -53,12 +53,12 @@ const Signup = () => {
                 {message?.firstName && message.firstName?.msg}
               </p>
             </div>
-            <div>
+            <div className="w-6/12	">
               <label className="mt-4 after:content-['*'] after:ml-0.5 after:text-red-500">
                 Last Name
               </label>
               <Input
-                className=" p-2 border border-gray rounded-md outline-none focus:border-gray invalid:border-red-500 w-full  "
+                className=" p-2 border border-gray rounded-md outline-none focus:border-gray invalid:border-red-500 "
                 placeholder="Last Name"
                 type="text"
                 name="lastName"

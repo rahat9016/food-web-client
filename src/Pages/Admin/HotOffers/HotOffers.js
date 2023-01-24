@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Sidebar from "../../../Components/Admin/Sidebar";
 import HotOffersForm from "../../../Components/Form/HotOffersForm";
 import Layout from "../../../Components/Layout/Layout";
 import { _offers } from "../../../Redux/Action/Offers";
@@ -40,7 +41,7 @@ const HotOffers = () => {
     setOffersPicture(e.target.files[0]);
   };
   return (
-    <Layout admin>
+    <Sidebar>
       <div className="px-10">
         <HotOffersForm
           handleChange={handleChange}
@@ -51,7 +52,7 @@ const HotOffers = () => {
           menu={menu}
         />
       </div>
-    </Layout>
+    </Sidebar>
   );
 };
 

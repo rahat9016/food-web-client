@@ -16,7 +16,6 @@ const Home = () => {
       <Offers />
       <HealthyFood />
       <TopSelling />
-      {/* <CustomerReview /> */}
     </Layout>
   );
 };

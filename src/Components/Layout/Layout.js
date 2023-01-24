@@ -7,50 +7,35 @@ import RightSide from "../Aside/RightSide/RightSide";
 const Layout = (props) => {
   return (
     <div>
-      {props.admin ? (
-        <div>
-          {/* Admin */}
-          <div className="flex">
-            <aside className="w-[15%] bg-[#030848] h-screen">
-              <LeftSide />
-            </aside>
-            <main className="w-[85%]">{props.children}</main>
+      <div>
+        {/* User */}
+        <div className="flex">
+          <aside className="h-full hidden  sticky top-0  lg:block w-[80px]">
+            <LeftSide />
+          </aside>
+          <div
+            className={`w-full bg-lightWhite lg:w-[75%]  ${
+              window.location.pathname === "/checkout"
+                ? "lg:w-full"
+                : "lg:block lg:w-[75%]"
+            }`}
+          >
+            <header className="sticky top-0 z-50	">
+              <Header />
+            </header>
+            <main>{props.children}</main>
           </div>
+          <aside
+            className={`h-full hidden  sticky top-0 bg-white drop-shadow-sm ${
+              window.location.pathname === "/checkout"
+                ? "hidden"
+                : "lg:block lg:w-[20%]"
+            }`}
+          >
+            <RightSide size="h-screen" />
+          </aside>
         </div>
-      ) : (
-        <div>
-          {/* User */}
-          <div className="flex">
-            <aside className="h-full hidden  sticky top-0  md:block w-[5%]">
-              <LeftSide />
-            </aside>
-            <div
-              className={`w-full bg-lightWhite md:w-[75%]  ${
-                window.location.pathname === "/checkout"
-                  ? "md:w-full"
-                  : "md:block md:w-[75%]"
-              }`}
-            >
-              <header className="sticky top-0 z-50	">
-                <Header />
-              </header>
-              <main>{props.children}</main>
-            </div>
-            <aside
-              className={`h-full hidden  sticky top-0 bg-white drop-shadow-sm ${
-                window.location.pathname === "/checkout"
-                  ? "hidden"
-                  : "md:block md:w-[20%]"
-              }`}
-            >
-              <RightSide />
-            </aside>
-          </div>
-          <footer className="w-[100%] bg-white drop-shadow-sm">
-            {/* <Footer /> */}
-          </footer>
-        </div>
-      )}
+      </div>
     </div>
   );
 };

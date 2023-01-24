@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "../../../Components/Layout/Layout";
+import Sidebar from "../../../Components/Admin/Sidebar";
 
 const Coupon = () => {
-  return <Layout admin></Layout>;
+  return <Sidebar></Sidebar>;
 };
 
 export default Coupon;

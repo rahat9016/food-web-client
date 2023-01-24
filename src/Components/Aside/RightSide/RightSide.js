@@ -4,16 +4,16 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import CartItem from "../../Cart/CartItem";
 import EmptyCart from "../../../Images/undraw_empty_cart_co35.svg";
-const RightSide = () => {
+const RightSide = (props) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const navigate = useNavigate();
-  const cartTotal = () => {
+  const cartTotal = (props) => {
     return cartItems.reduce((currentValue, nextValue) => {
       return currentValue + nextValue.food_qty * nextValue.food_price;
     }, 0);
   };
   return (
-    <div className="px-10 h-screen">
+    <div className={`px-10 ${props.size}`}>
       <div className="flex flex-col justify-between w-full h-full">
         <div>
           <div className="flex items-center justify-between mt-10">
