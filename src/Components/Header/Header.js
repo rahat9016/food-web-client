@@ -70,12 +70,11 @@ const Header = () => {
             className={` w-full h-10  bg-pink text-white shadow-md flex gap-1 items-center justify-center text-lg mt-5 rounded-xl mb-2 ${
               auth.authenticate ? "block" : "hidden"
             }`}
+            onClick={() => {
+              dispatch(_logout());
+            }}
           >
-            <FiLogOut
-              onClick={() => {
-                dispatch(_logout());
-              }}
-            />
+            <FiLogOut />
             Logout
           </button>
         </div>
