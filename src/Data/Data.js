@@ -8,11 +8,6 @@ import {
 import { CgShoppingBag } from "react-icons/cg";
 import { MdOutlineFastfood } from "react-icons/md";
 import { BsMenuButtonWideFill } from "react-icons/bs";
-import Burger from "../Images/burger_nnq4osbtgswt_512.png";
-import Pizza from "../Images/pizza_4pxllj7qp295_512.png";
-import Hotdog from "../Images/hotdog_ndphya5wxqsl_512.png";
-import Taco from "../Images/taco_tu69yjs1cpip_512.png";
-import Drink from "../Images/drink_n3qeplxd044i_512.png";
 export const SidebarUserData = [
   {
     icon: BiHomeSmile,
@@ -81,32 +76,5 @@ export const SidebarAdminData = [
     heading: "Coupon",
     location: "/admin/coupon",
     id: 6,
-  },
-];
-export const CategoryData = [
-  {
-    icon: Burger,
-    title: "Burger",
-    id: 1,
-  },
-  {
-    icon: Pizza,
-    title: "Pizza",
-    id: 2,
-  },
-  {
-    icon: Hotdog,
-    title: "Hotdog",
-    id: 3,
-  },
-  {
-    icon: Taco,
-    title: "Taco",
-    id: 4,
-  },
-  {
-    icon: Drink,
-    title: "Drink",
-    id: 5,
   },
 ];
