@@ -21,14 +21,14 @@ const Header = () => {
       <div className="justify-between md:justify-around h-20 flex flex-row items-center px-4  bg-lightWhite z-50">
         {menuOpen ? (
           <MdClose
-            className="text-2xl lg:hidden"
+            className="text-3xl lg:hidden cursor-pointer"
             onClick={() => {
               setMenuOpen(!menuOpen);
             }}
           />
         ) : (
           <RiMenu4Line
-            className="text-2xl lg:hidden"
+            className="text-3xl lg:hidden cursor-pointer"
             onClick={() => {
               setMenuOpen(!menuOpen);
             }}
@@ -40,14 +40,18 @@ const Header = () => {
           className="w-24 lg:w-40 cursor-pointer"
           onClick={() => navigate("/")}
         />
+        <div className="hidden lg:block">
         <Search />
+        </div>
         <AiOutlineShoppingCart
-          className="text-2xl lg:hidden"
-          onClick={() => setCartOpen(!cartOpen)}
+          className="text-3xl lg:hidden cursor-pointer"
+          onClick={() => {
+            setCartOpen(!cartOpen)
+          }}
         />
       </div>
       <div
-        className={`lg:hidden absolute top-[80px] z-50 w-full bg-white shadow-sm duration-500 ${
+        className={`lg:hidden absolute top-[80px] z-50 w-full h-fit bg-white shadow-sm duration-500  ${
           menuOpen ? "left-0" : "left-[-100%]"
         }`}
       >
@@ -79,12 +83,14 @@ const Header = () => {
           </button>
         </div>
       </div>
+     
       <div
-        className={`lg:hidden absolute z-50 w-full top-[80px] bg-white shadow-sm duration-500 ${
-          cartOpen ? "left-0" : "left-[-100%]"
+        className={`absolute  z-50 w-full h-screen lg:hidden bg-white shadow-sm duration-500 
+        ${
+          cartOpen ? "right-0" : "right-[2000px]"
         }`}
       >
-        <RightSide size="h-full" />
+      <RightSide/>
       </div>
     </>
   );
